@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="This is where your description goes">
+    	<meta name="keywords" content="one, two, three">
+
+		<title>PokeDex</title>
+
+		<!-- external CSS link -->
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto&family=Sansita+Swashed:wght@300&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<div id="main_border">
+			<div id="row1">
+				<h1>Enter a Pokémon below to learn more!</h1>
+				
+				<input type="text" id="myInput" placeholder="Type Pokémon here">
+				<button type="button" id="myButton" name="button" onclick="getFetch(false)">Get Pokemon</button>
+				<button type="button" id="randomButton" name="button" onclick="getFetch(true)">Random</button>
+
+			</div>
+
+			<div id="row2">
+				<div id="pokedex_left_border">
+					<div class="top_lights_section">
+						<div id="white_back_light">
+							<div id="blue_light">
+								<div id="reflect_blue_light">
+								</div>
+							</div>
+						</div>
+						<div class="small_left_lights_container">
+							<div class="small_left_lights" id="small_left_light_1">
+								<div class="small_left_light_1_ref"></div>
+							</div>
+							<div class="small_left_lights" id="small_left_light_2">
+								<div class="small_left_light_2_ref"></div>
+							</div>
+							<div class="small_left_lights" id="small_left_light_3">
+								<div class="small_left_light_3_ref"></div>
+							</div>
+						</div>
+					</div>
+					<svg height="100" width="350" class="left-svg">
+						<polyline
+						 points="0,57 110,57 130,30 350,30"
+						 style="fill: none; stroke: black; stroke-width: 3"
+						 />
+					</svg>
+					<div id="screen_container">
+						<div id="main_screen">
+							<img id="pokemon_image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Pok%C3%A9_Ball_icon.svg/770px-Pok%C3%A9_Ball_icon.svg.png" alt="pokemon">
+						</div>
+					</div>
+					<div id="left_bottom_buttons_container">
+						<div id="gray_left_button_container">
+							<div id="gray_left_button">
+
+							</div>
+							<div id="tiny_dots_container">
+								<div id="tiny_dots">
+
+								</div>
+								<div id="tiny_dots">
+
+								</div>
+							</div>
+						</div>
+						<div id="small_left_greenscreen_container">
+							<div id="long_left_buttons_container">
+								<div id="long_left_buttons_red">
+
+								</div>
+								<div id="long_left_buttons_blue">
+
+								</div>
+							</div>
+							<div id="small_left_greenscreen"></div>
+						</div>
+						<div id="Dpad_container">
+							<div id="Dpad">
+								<div class="nav-center-circle"></div>
+								<div class="nav-button-vertical"></div>
+								<div class="nav-button-horizontal">
+									<div class="border-top"></div>
+									<div class="border-bottom"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="pokedex_right_border">
+					<svg height="100" width="350" class="left-svg">
+						<polyline
+						 points="0,30 220,30 240,52 350,52"
+						 style="fill: none; stroke: black; stroke-width: 4"
+						 />
+					</svg>
+					<div class="big_right_grayscreen_container">
+						<div class="big_right_grayscreen">
+							<h2 class="text1" id="pokemon_name">Name of Pokémon</h2>
+							<h3 class="text2" id="pokemon_id">Number</h3>
+							<h3 class="text2" id="pokemon_height">Height</h3>
+							<h3 class="text2" id="pokemon_weight">Weight</h3>
+						</div>
+					</div>
+					<div class="right_blue_buttons_container">
+						<div class="right_blue_buttons"></div>
+						<div class="right_blue_buttons"></div>
+						<div class="right_blue_buttons"></div>
+						<div class="right_blue_buttons"></div>
+						<div class="right_blue_buttons"></div>
+						<div class="right_blue_buttons"></div>
+						<div class="right_blue_buttons"></div>
+						<div class="right_blue_buttons"></div>
+						<div class="right_blue_buttons"></div>
+						<div class="right_blue_buttons"></div>
+					</div>
+					<div class="right_middle_buttons_container">
+						<div class="right_middle_left_section">
+							<div class="right_middle_red_buttons_container">
+								<div class="right_middle_red_buttons"></div>
+								<div class="right_middle_red_buttons"></div>
+							</div>
+							<div class="right_middle_white_buttons_container">
+								<div class="right_middle_white_buttons"></div>
+								<div class="right_middle_white_buttons"></div>
+							</div>
+						</div>
+						<div class="right_middle_right_section">
+							<div class="right_middle_long_buttons_container">
+								<div class="right_middle_long_button"></div>
+								<div class="right_middle_long_button"></div>
+							</div>
+							<div class="right_middle_yellow_button_container">
+								<div class="right_middle_yellow_button"></div>
+							</div>
+						</div>
+					</div>
+					<div class="right_bottom_buttons_container">
+						<div class="small_right_grayscreen">
+							<ul class="ul_text2"></ul>
+						</div>
+						<div class="small_right_grayscreen">
+							<ul class="ul_sprites">
+								<li><img class="hidden sprites" id="front_sprites" src="" alt=""></li>
+								<li><img class="hidden sprites" id="back_sprites" src="" alt=""></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="information_border">
+				<h2 id="pokemon_name">Name?</h2>
+				<h3 id="pokemon_type">Type?</h3>
+				<h3 id="pokemon_id">ID Number?</h3>
+				<ul></ul>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="js/main.js"></script>
+	</body>
+</html>
